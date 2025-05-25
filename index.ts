@@ -14,7 +14,7 @@ type PhishingEmails = {
     "Url": string,
     "Posted": string,
     "Title": string,
-    // "HTML": string
+    "HTML": string
 };
 
 const runAll = async () => {
