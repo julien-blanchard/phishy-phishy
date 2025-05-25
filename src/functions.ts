@@ -17,7 +17,7 @@ export const fetchData = async (path_to_url: string, user_agent: {[key: string]:
             "Url": path_to_url,
             "Posted": time_today,
             "Title": selector("title").text(),
-            // "HTML": resp.data
+            "HTML": resp.data
         };
         console.log(outcome);
         return result;
