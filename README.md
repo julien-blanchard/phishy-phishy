@@ -1,5 +1,5 @@
 ![Project status](https://img.shields.io/badge/version-0.1-yellow)
-![TypeScript version](https://img.shields.io/badge/requires-python_3.6-blue)
+![Bun version](https://img.shields.io/badge/requires-bun_1.0-blue)
 
 # Phishy Phishy!
 
