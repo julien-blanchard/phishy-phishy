@@ -5,16 +5,16 @@
 
 **Phishy Phishy!** is a simple library for the scraping of phishing websites. Its purpose is to help cybersecurity students and researchers create datasets that they can train various machine learning models on.
 
-**Phishy Phishy!** is written in [**TypeScript](https://www.typescriptlang.org/) and retrieves phishing urls directly from [OpenPhish](https://openphish.com/)'s *Community feed*. This approach comes with its pros and cons:
+**Phishy Phishy!** is written in [**TypeScript**](https://www.typescriptlang.org/) and retrieves phishing urls directly from [OpenPhish](https://openphish.com/)'s *Community feed*. This approach comes with its pros and cons:
 
-* :x: The list of urls only gets updated every 12 hours.
+* :x: You'll only be getting new urls every 12 hours.
 * :white_check_mark: You don't need an API key to retrieve.
 
 **Disclaimer**: in order to use **Phishy Phishy!** you must first read and aknowledge **OpenPhish**'s [terms of use](https://openphish.com/terms.html).
 
 ## What you get
 
-After running 
+After running the script, you'll find a freshly created JSON file at the root of your `phishyphishy` folder. This 
 
 1.  The url of the website.
 2.  The x its `<title></title>` tags.
@@ -22,12 +22,11 @@ After running
 
 See the [sample JSON file](https://github.com/julien-blanchard/phishy-phishy/blob/main/datasets/2025-05-25_phishing_urls.json) for more information.
 
-
 ## Instructions
 
 **Step 1**: To run **Phishy Phishy!**, you'll need to have the [**Bun**](https://bun.sh/) runtime installed.
 
-*  On Windows machines through [Chocolatey](https://community.chocolatey.org/packages/bun) (recommended):
+*  On Windows machines you might want to use [Chocolatey](https://community.chocolatey.org/packages/bun) (recommended):
 
 ```
 choco install bun
@@ -59,12 +58,13 @@ bun init
 bun install axios cheerio
 ```
 
-**Step 1**: Download the `index.ts` and `scraping_functions.ts` into the root and `src` folders respectively:
+**Step 5**: Download the `index.ts` and `scraping_functions.ts` into the root and `src` folders respectively.
 
-To start scraping your first phishing websites, simply type:
+To start scraping your first phishing websites, simply type in the following :
 
 ```
 bun run index.ts
 ```
 
+## Feedback
 Enjoy!
