@@ -5,16 +5,18 @@
 
 **Phishy Phishy!** is a simple library for the scraping of phishing websites. Its purpose is to help cybersecurity students and researchers create datasets that they can train various machine learning models on.
 
-**Phishy Phishy!** is written in [**TypeScript**](https://www.typescriptlang.org/) and retrieves phishing urls directly from [OpenPhish](https://openphish.com/)'s *Community feed*. This approach comes with its pros and cons:
+![alt text](https://github.com/julien-blanchard/phishy-phishy/blob/main/images/phishyphishy.png "Image")
+
+**Phishy Phishy!** is written in [**TypeScript**](https://www.typescriptlang.org/) and retrieves phishing urls directly from [OpenPhish](https://openphish.com/)'s *Community feed*. 
+
+Pros and cons of using the *Community* version:
 
 * :x: You'll only be getting new urls every 12 hours.
 * :white_check_mark: You don't need to create an account and generate an API key.
 
 **Disclaimer**: in order to use **Phishy Phishy!** you must first read and acknowledge **OpenPhish**'s [terms of use](https://openphish.com/terms.html).
 
-# What's in the box
-
-![alt text](https://github.com/julien-blanchard/phishy-phishy/blob/main/images/phishyphishy.png "Image")
+# Catching your first phish:
 
 After running the script, you'll find a freshly created JSON file at the root of your `phishyphishy` folder. Each record contains:
 
@@ -62,7 +64,7 @@ bun install axios cheerio
 
 **Step 5**: Download the `index.ts` and `scraping_functions.ts` into the root and `src` folders respectively.
 
-To start scraping your first phishing websites, simply type in the following :
+To start scraping your first phishing websites, simply type in the following command:
 
 ```
 bun run index.ts
@@ -70,4 +72,4 @@ bun run index.ts
 
 # Feedback
 
-Enjoy!
+Feel free to reach out if you want to contribute or suggest improvements.
