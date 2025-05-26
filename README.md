@@ -1,14 +1,14 @@
 ![Project status](https://img.shields.io/badge/version-0.1-yellow)
 ![Bun version](https://img.shields.io/badge/requires-bun_1.0-blue)
 
-# :fish: Phishy Phishy!
+# :fish: :fish: Phishy Phishy!
 
-**Phishy Phishy!** is a simple library for the scraping of phishing websites. Its purpose is to help cybersecurity students and researchers create phishing websites datasets that they can train machine learning models on.
+**Phishy Phishy!** is a simple library for the scraping of phishing websites. Its purpose is to help cybersecurity students and researchers create datasets that they can train various machine learning models on.
 
-**Phishy Phishy!** is written in [**TypeScript](https://www.typescriptlang.org/) and retrieves a list of phishing urls from [OpenPhish](https://openphish.com/)'s *Community feed*, meaning that:
+**Phishy Phishy!** is written in [**TypeScript](https://www.typescriptlang.org/) and retrieves phishing urls directly from [OpenPhish](https://openphish.com/)'s *Community feed*. This approach comes with its pros and cons:
 
-* The list of urls only gets updated every 12 hours.
-* You don't need an API key to retrieve.
+* :x: The list of urls only gets updated every 12 hours.
+* :white_check_mark: You don't need an API key to retrieve.
 
 **Disclaimer**: in order to use **Phishy Phishy!** you must first read and aknowledge **OpenPhish**'s [terms of use](https://openphish.com/terms.html).
 
