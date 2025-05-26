@@ -1,7 +1,7 @@
 import axios from "axios";
 import * as cheerio from "cheerio";
 import * as fs from "fs";
-import {openJSONFile, fetchData, writeToJSON} from "./src/functions.ts";
+import {openJSONFile, fetchData, writeToJSON} from "./src/scraping_functions.ts";
 
 const PATH_TO_PHISING_URLS: string = "https://raw.githubusercontent.com/openphish/public_feed/refs/heads/main/feed.txt";
 const TIME_TODAY = new Date().toISOString().split("T")[0] as string;
@@ -31,4 +31,4 @@ const runAll = async () => {
     writeToJSON(PATH_TO_JSON_FILE, result);
 };
 
-runAll();
+await runAll();
