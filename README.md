@@ -1,7 +1,7 @@
 ![Project status](https://img.shields.io/badge/version-0.1-yellow)
 ![Bun version](https://img.shields.io/badge/requires-bun_1.0-blue)
 
-# Phishy Phishy!
+# :fish: Phishy Phishy!
 
 **Phishy Phishy!** is a simple library for the scraping of phishing websites. Its purpose is to help cybersecurity students and researchers create phishing websites datasets that they can train machine learning models on.
 
