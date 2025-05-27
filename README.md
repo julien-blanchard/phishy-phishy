@@ -7,9 +7,9 @@
 
 ![alt text](https://github.com/julien-blanchard/phishy-phishy/blob/main/images/phishyphishy.png "Image")
 
-**Phishy Phishy!** is written in [**TypeScript**](https://www.typescriptlang.org/) and retrieves phishing urls directly from [OpenPhish](https://openphish.com/)'s *Community feed*. 
+**Phishy Phishy!** retrieves phishing urls from [OpenPhish](https://openphish.com/)'s *Community feed*, and scrapes the content of the landing webpages for these urls. 
 
-Pros and cons of using the *Community* version:
+Pros and cons of using **OpenPhish**'s *Community* version:
 
 * :x: You'll only be getting new urls every 12 hours.
 * :white_check_mark: You don't need to create an account and generate an API key.
