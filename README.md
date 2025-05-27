@@ -21,8 +21,8 @@ Pros and cons of using **OpenPhish**'s *Community* version:
 After running the script, you'll find a freshly created JSON file at the root of your `phishyphishy` folder. Each record contains:
 
 1.  The url of the webpage that was scraped.
-2.  The text that was found between the `<title></title>` tags of the webpage.
-3.  The full 
+2.  The text that was found between the `<title></title>` tags of the lamding webpage.
+3.  The full html content of that webpage.
 
 See the [sample JSON file](https://github.com/julien-blanchard/phishy-phishy/blob/main/datasets/2025-05-25_phishing_urls.json) for more information.
 
