@@ -19,7 +19,7 @@ type PhishingEmails = {
 
 const runAll = async () => {
     const response = await axios.get(PATH_TO_PHISING_URLS);
-    const new_urls: string[] = response.data.split("\n");
+    const new_urls: string[] = response.data.split("\n").slice(0,-1);
     const num_urls: number = new_urls.length;
     let count_start: number = 1;
     let result: any = [];
