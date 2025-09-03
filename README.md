@@ -16,7 +16,7 @@ Pros and cons of using **OpenPhish**'s *Community* version:
 
 **Disclaimer**: in order to use **Phishy Phishy!** you must first read and acknowledge **OpenPhish**'s [terms of use](https://openphish.com/terms.html).
 
-# Catching your first phish
+# Catch your first phish
 
 After running the script, you'll find a freshly created JSON file at the root of your `phishyphishy` folder. Each record contains:
 
