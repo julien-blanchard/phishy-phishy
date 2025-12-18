@@ -2,11 +2,13 @@ import axios from "axios";
 import * as cheerio from "cheerio";
 import * as fs from "fs";
 import {parseArgs} from "util";
-import {openJSONFile, fetchData, writeToJSON} from "./src/scraping_functions.ts";
+import {openJSONFile, fetchData, writeToJSON} from "./src/scraping.ts";
+import {getUserArgs} from "./src/user.ts"
 
 const PATH_TO_PHISING_URLS: string = "https://raw.githubusercontent.com/openphish/public_feed/refs/heads/main/feed.txt";
 const TIME_TODAY = new Date().toISOString().split("T")[0] as string;
 const PATH_TO_JSON_FILE: string = `./datasets/${TIME_TODAY}_phishing_urls.json`;
+const USER_INPUTS: {string: boolean} = getUserArgs(Bun.argv);
 const USER_AGENT: {[key: string]: string} = {
   "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36"
 };
@@ -26,11 +28,12 @@ const runAll = async () => {
     let result: any = [];
     for (let new_url of new_urls) {
         let new_entry: PhishingEmails = await fetchData(
-          new_url,
-          USER_AGENT,
-          count_start,
-          num_urls,
-          TIME_TODAY
+            new_url,
+            USER_AGENT,
+            count_start,
+            num_urls,
+            TIME_TODAY,
+            USER_INPUTS
         );
         result.push(new_entry);
         count_start ++;
@@ -39,4 +42,3 @@ const runAll = async () => {
 };
 
 await runAll();
-
