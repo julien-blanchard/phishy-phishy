@@ -1,6 +1,7 @@
 import axios from "axios";
 import * as cheerio from "cheerio";
 import * as fs from "fs";
+import {parseArgs} from "util";
 import {openJSONFile, fetchData, writeToJSON} from "./src/scraping_functions.ts";
 
 const PATH_TO_PHISING_URLS: string = "https://raw.githubusercontent.com/openphish/public_feed/refs/heads/main/feed.txt";
@@ -24,7 +25,13 @@ const runAll = async () => {
     let count_start: number = 1;
     let result: any = [];
     for (let new_url of new_urls) {
-        let new_entry: PhishingEmails = await fetchData(new_url, USER_AGENT, count_start, num_urls, TIME_TODAY);
+        let new_entry: PhishingEmails = await fetchData(
+          new_url,
+          USER_AGENT,
+          count_start,
+          num_urls,
+          TIME_TODAY
+        );
         result.push(new_entry);
         count_start ++;
     }
@@ -32,3 +39,4 @@ const runAll = async () => {
 };
 
 await runAll();
+
