@@ -3,6 +3,8 @@
 
 # :fish: :fish: **Phishy Phishy!**
 
+*Disclaimer: The code that you'll find in this repository, as well as this README file, were created and written by me. No AI was used.*
+
 **Phishy Phishy!** is a simple library for the scraping of phishing websites. Its purpose is to help cybersecurity students and researchers create datasets that they can train various machine learning models on.
 
 ![alt text](https://github.com/julien-blanchard/phishy-phishy/blob/main/images/phishyphishy.png "Image")
@@ -68,6 +70,12 @@ To start scraping your first phishing websites, simply type in the following com
 
 ```
 bun run index.ts
+```
+
+By default, **Phishy Phishy!** will only retrieve the text that can be found within the `<title></title>` of the targeted webpage. To also retrieve the text contained within the `<body></body>`, you'll need to append the following flag:
+
+```
+bun run index.ts --fullpage
 ```
 
 # Feedback
