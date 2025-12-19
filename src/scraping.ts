@@ -27,7 +27,7 @@ export const fetchData = async (
             "HTML": ""
         };
         if (include_page_content["fullpage"]) {
-            result["HTML"] = resp.data;
+            result["HTML"] = selector("body").text();
         };
         console.log(outcome);
         return result;
@@ -44,3 +44,4 @@ export const writeToJSON = (path_to_file: string, data: string): void => {
         }
     )
 };
+
