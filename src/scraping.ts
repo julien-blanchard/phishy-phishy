@@ -33,7 +33,6 @@ export const fetchData = async (
                                         .replace(/\s{2,}/g, " ");
             result["HTML"] = full_page;
         };
-        console.log(result);
         return result;
     }
     catch (err) {
@@ -48,3 +47,4 @@ export const writeToJSON = (path_to_file: string, data: string): void => {
         }
     )
 };
+
