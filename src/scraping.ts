@@ -27,12 +27,19 @@ export const fetchData = async (
             "HTML": ""
         };
         if (include_page_content["fullpage"]) {
-            selector("script").remove();
-            const full_page: string = selector("body")
-                                        .text()
-                                        .replace(/\s{2,}/g, " ");
-            result["HTML"] = full_page;
+            try {
+                selector("script").remove();
+                const full_page: string = selector("body")
+                    .text()
+                    .replace(/\s{2,}/g, " ");
+                result["HTML"] = full_page;
+            }
+            catch (err) {
+                result["HTML"] = "N/A";
+            }
+
         };
+        console.log(result);
         return result;
     }
     catch (err) {
@@ -47,4 +54,3 @@ export const writeToJSON = (path_to_file: string, data: string): void => {
         }
     )
 };
-
