@@ -39,7 +39,7 @@ export const fetchData = async (
             }
 
         };
-        console.log(result);
+        console.log(outcome);
         return result;
     }
     catch (err) {
@@ -54,3 +54,4 @@ export const writeToJSON = (path_to_file: string, data: string): void => {
         }
     )
 };
+
