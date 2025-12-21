@@ -29,6 +29,7 @@ export const fetchData = async (
         if (include_page_content["fullpage"]) {
             try {
                 selector("script").remove();
+                selector("style").remove();
                 const full_page: string = selector("body")
                     .text()
                     .replace(/\s{2,}/g, " ");
@@ -54,4 +55,5 @@ export const writeToJSON = (path_to_file: string, data: string): void => {
         }
     )
 };
+
 
