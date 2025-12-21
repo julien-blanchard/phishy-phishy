@@ -30,6 +30,12 @@ export const fetchData = async (
             try {
                 selector("script").remove();
                 selector("style").remove();
+                selector("img").remove();
+                selector("iframe").remove();
+                selector("button").remove();
+                selector("embed").remove();
+                selector("video").remove();
+                selector("svg").remove();
                 const full_page: string = selector("body")
                     .text()
                     .replace(/\s{2,}/g, " ");
@@ -55,5 +61,6 @@ export const writeToJSON = (path_to_file: string, data: string): void => {
         }
     )
 };
+
 
 
