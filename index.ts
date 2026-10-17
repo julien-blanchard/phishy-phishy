@@ -5,7 +5,7 @@ import {parseArgs} from "util";
 import {openJSONFile, fetchData, writeToJSON} from "./src/scraping.ts";
 import {getUserArgs} from "./src/user.ts"
 
-const PATH_TO_PHISING_URLS: string = "https://raw.githubusercontent.com/openphish/public_feed/refs/heads/main/feed.txt";
+const PATH_TO_PHISHING_URLS: string = "https://raw.githubusercontent.com/openphish/public_feed/refs/heads/main/feed.txt";
 const TIME_TODAY = new Date().toISOString().split("T")[0] as string;
 const PATH_TO_JSON_FILE: string = `./datasets/${TIME_TODAY}_phishing_urls.json`;
 const USER_INPUTS: {string: boolean} = getUserArgs(Bun.argv);
@@ -21,7 +21,7 @@ type PhishingEmails = {
 };
 
 const runAll = async () => {
-    const response = await axios.get(PATH_TO_PHISING_URLS);
+    const response = await axios.get(PATH_TO_PHISHING_URLS);
     const new_urls: string[] = response.data.split("\n").slice(0,-1);
     const num_urls: number = new_urls.length;
     let count_start: number = 1;
